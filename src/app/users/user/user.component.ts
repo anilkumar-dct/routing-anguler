@@ -1,10 +1,10 @@
 import { Component, computed, input } from '@angular/core';
 
 import { type User } from './user.model';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   selector: 'app-user',
   standalone: true,
   templateUrl: './user.component.html',
