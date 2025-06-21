@@ -12,5 +12,6 @@ export const routes: Routes = [
   {
     path: 'users/:userId', //dynamic route-> your-domain/users/u1
     component: UserTasksComponent,
+    children: [{ path: 'tasks', component: TasksComponent }], //use of nested routing
   },
 ];
