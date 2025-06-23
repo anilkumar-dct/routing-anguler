@@ -1,9 +1,12 @@
+<a routerLink="./" [queryParams]="{ order: 'asc' }">
+  sort /asending or desending
+</a>
 <ul>
-  @for (task of userTasks; track task.id) {
-    <li>
-      <app-task [task]="task" />
-    </li>
+  @for (task of userTasks(); track task.id) {
+  <li>
+    <app-task [task]="task" />
+  </li>
   } @empty {
-    <p>There are no tasks yet. Start adding some!</p>
+  <p>There are no tasks yet. Start adding some!</p>
   }
 </ul>
